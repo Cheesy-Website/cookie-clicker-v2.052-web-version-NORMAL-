@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <!-- external -->
@@ -80,14 +80,15 @@ var App=typeof App==='undefined'?0:App;
 		<div><a class="lightblueLink" style="font-weight:bold;" href="https://store.steampowered.com/app/1454400/Cookie_Clicker/" target="_blank" id="topbarSteamCC">Cookie Clicker on Steam</a></div>
 		<div><a href="//orteil.dashnet.org/randomgen/" target="_blank" id="topbarRandomgen">RandomGen</a></div>
 		<div><a href="//orteil.dashnet.org/igm/" target="_blank" id="topbarIGM">Idle Game Maker</a></div>
+		<div><a class="purplelink" href="https://www.youtube.com/channel/UCApBZpO0Ezw9eRc4SbRsbgA" target="_blank" id="topbarIGM">My youtube</a></div>
 		<div style="float:right;position:relative;"><div id="tinyglobe" style="position:absolute;top:-4px;width:22px;height:22px;background:url(img/tinyglobeSheet.gif);right:4px;top:4px;pointer-events:none;"></div><a id="changeLanguage" style="font-variant:small-caps;padding-right:20px;" onmouseover="INTERVAL_TINYGLOBE=setInterval(function(){var tinyglobe=document.getElementById('tinyglobe');tinyglobe.style.backgroundPosition=(parseInt(tinyglobe.style.backgroundPosition)-22)+'px';},30);" onmouseout="clearInterval(INTERVAL_TINYGLOBE);">Change language</a><script>document.getElementById('tinyglobe').style.backgroundPosition=(-[0,19,27][Math.floor(Math.random()*3)]*22)+'px';</script></div>
 		<div id="links" class="hoverer">
-			Other versions
+			Addons
 			<div class="hoverable">
-				<a href="../" target="_blank" id="linkVersionLive">Live version</a>
-				<a href="beta" target="_blank" id="linkVersionBeta">Try the beta!</a>
-				<a href="//orteil.dashnet.org/cookieclicker/v10466" target="_blank" id="linkVersionOld">v. 1.0466</a>
-				<a href="//orteil.dashnet.org/experiments/cookie/" target="_blank">Classic</a>
+				<a href="javascript:(function () {Game.LoadMod('https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js');}());" target="_blank" id="linkVersionLive">Cookie Monster</a>
+			        <a href="javascript:(function () {Game.LoadMod('https://klattmose.github.io/CookieClicker/KlattmoseUtilities.js?v=2.16');}());" id="linkVersionOld">Klattmose's Utilities</a>
+				<a href="javascript: (function () {Game.LoadMod('https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js');}());" id="linkVersionBeta">Cookie Monster</a>
+				<a href="https://sushi8756.github.io/Cookie-Clicker-Guide/" target="_blank">More Addons</a>
 			</div>
 		</div>
 	</div>
@@ -102,7 +103,7 @@ var App=typeof App==='undefined'?0:App;
 					<div id="loading" class="title">Loading...</div>
 					<div id="failedToLoad" class="title">This is taking longer than expected.<br>
 					<div style="font-size:65%;line-height:120%;"><!-- error -->Slow connection? If not, please make sure your javascript is enabled, then refresh.<br>
-					If problems persist, this might be on our side - wait a few minutes, then hit ctrl+f5!<!-- /error --></div></div>
+					If it still wont load, I am probably doing maintenance. If this has been happening for an hour or more tell me. My gmail is alexdegler17@gmail.com<!-- /error --></div></div>
 					<div id="ifIE9" class="title" style="font-size:100%;line-height:120%;">Your browser may not be recent enough to run Cookie Clicker.<br>You might want to update, or switch to a more modern browser such as Chrome or Firefox.</div>
 				</div>
 			</div>
@@ -229,6 +230,30 @@ var App=typeof App==='undefined'?0:App;
 						<script>
 						(adsbygoogle = window.adsbygoogle || []).push({});
 						</script>
+
+						<script>
+
+					        			function loadMod() {
+			  /* Get the text field */
+			  var copyText = document.getElementById("modLoader");
+			
+			  /* Select the text field */
+			  copyText.select();
+			  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+			 
+			  /* Sends you to the link */
+			  window.location.href = copyText.value;
+			}
+			</script>
+			<!-- The button used to copy the text -->
+			<button onclick="loadMod()">Load</button>
+			<!-- The text field -->
+			<input style="position= absolute;" type="text" value="" id="modLoader">
+			<!-- The text field -->
+			<br>
+			<div style="width:300px;text-align:center;padding:8px 0px;background:rgba(0,0,0,0);font-size:15px;opacity:0.5;text-shadow:0px 0px 2px #000,0px 1px 0px #000;text-align:center;">
+				Paste a bookmark addon into here<br>and press the button to load the mod.<br>DONT DO A LINK! Or you will leave the site.
+			</div>
 				
 						<script>
 						document.addEventListener('DOMContentLoaded',function(){
