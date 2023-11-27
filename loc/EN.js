@@ -144,7 +144,7 @@ AddLanguage('EN','english',{
 	"Change language": "/",
 	"note: this will save and reload your game": "/",
 	"Press %1 to toggle fullscreen.": "/",
-	"Other versions": "/",
+	"Other versions": "Mods",
 	"Beta": "/",
 	"Stats": "/",
 	"Shadow achievements": "/",
