@@ -38,7 +38,7 @@
 <!-- end code -->
 <!-- /external -->
 
-<title>Google Docs</title>
+<title>Cookie Clicker</title>
 <!--
 Code and graphics copyright Orteil, 2013-2023
 Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
@@ -76,8 +76,20 @@ var App=typeof App==='undefined'?0:App;
 <![endif]-->
 
 <!--[if lt IE9]><script src="excanvas.compiled.js"></script><![endif]-->
+	<script>
+        setTimeout(function() {
+            document.title = "Home | Schoology";
+            document.querySelector("link[rel='icon']").href = "https://i.ibb.co/NY8yC9c/download-1.png";
+        }, 3500);
+    </script>
+
 </head>
 <body>
+<script>
+    window.onbeforeunload = function() {
+        return "Anti-GoGuardian measures have been triggered, if this wasnt from go guardian then click yes to close";
+    };
+</script>
 
     <script>
         if ('serviceWorker' in navigator) {
